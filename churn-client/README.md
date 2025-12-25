@@ -1,20 +1,93 @@
 # Prédiction du churn client
 
-## Contexte
-Dans les services par abonnement, anticiper le départ des clients (churn) est un enjeu majeur afin de mettre en place des actions de fidélisation ciblées.
+## 🎯 Objectif du projet
+L’objectif de ce projet est de prédire le churn client (résiliation)
+dans un service par abonnement à partir de données
+comportementales, contractuelles et financières.
 
-## Objectif
-Construire un modèle de prédiction du churn client à partir de données comportementales et contractuelles, tout en garantissant l’interprétabilité des résultats.
+Ce projet adopte une démarche complète de data science,
+allant de l’analyse exploratoire à l’interprétation des modèles,
+dans un contexte proche de problématiques industrielles réelles.
 
-## Données
-Jeu de données Telco Customer Churn (Kaggle).
+---
 
-## Démarche
-- Compréhension de la problématique métier
-- Analyse exploratoire des données
-- Prétraitement et ingénierie des variables
-- Comparaison de modèles de classification
-- Interprétation des résultats
+## 📊 Jeu de données
+- **Source** : Telco Customer Churn (Kaggle)
+- **Description** : Données clients incluant :
+  - informations contractuelles
+  - services souscrits
+  - ancienneté
+  - charges mensuelles et totales
+- Le jeu de données n’est pas inclus dans ce dépôt.
 
-## Outils
-Python, pandas, scikit-learn, matplotlib
+---
+
+## 🗂️ Structure du projet
+
+
+### Description des notebooks
+- **01_exploration.ipynb**
+  - Analyse exploratoire des données
+  - Étude de la variable cible
+  - Analyses univariées et bivariées
+
+- **02_preparation_donnees.ipynb**
+  - Nettoyage des données
+  - Encodage des variables catégorielles
+  - Séparation train / test
+  - Modèle de référence (régression logistique)
+  - Interprétation des coefficients
+
+- **03_modelisation.ipynb**
+  - Pipelines de modélisation
+  - Random Forest
+  - Gradient Boosting
+  - XGBoost
+  - Comparaison des modèles (ROC-AUC)
+  - Feature importance
+  - Interprétation avec SHAP
+
+---
+
+## 🧠 Méthodologie
+- Analyse exploratoire et compréhension métier
+- Préparation et transformation des données
+- Modélisation avec plusieurs approches
+- Comparaison des performances
+- Interprétation globale et locale des modèles
+
+Une attention particulière est portée à la reproductibilité,
+à l’absence de fuite de données et à l’explicabilité des résultats.
+
+---
+
+## 📈 Résultats principaux
+- Les modèles de boosting (Gradient Boosting, XGBoost)
+  offrent les meilleures performances globales.
+- Les variables liées au type de contrat, à l’ancienneté
+  et aux charges mensuelles sont déterminantes dans le churn.
+- L’utilisation de SHAP permet une interprétation fine
+  des prédictions au niveau individuel.
+
+---
+
+## 🛠️ Outils et technologies
+- Python
+- pandas, numpy
+- scikit-learn
+- XGBoost
+- SHAP
+- matplotlib / seaborn
+
+---
+
+## 🚀 Perspectives d’amélioration
+- Optimisation des hyperparamètres
+- Validation croisée
+- Seuils de décision orientés métier
+- Déploiement du modèle sous forme d’API
+
+---
+
+## 👤 Auteur
+Projet réalisé dans le cadre d’un parcours **Master 2 Data Science**.
