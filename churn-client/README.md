@@ -62,7 +62,7 @@ Une attention particulière est portée à la reproductibilité,
 ---
 
 ## 📈 Résultats principaux
-- Les modèles de boosting (Gradient Boosting, XGBoost)
+- Les modèles de boosting (Gradient Boosting)
   offrent les meilleures performances globales.
 - Les variables liées au type de contrat, à l’ancienneté
   et aux charges mensuelles sont déterminantes dans le churn.
@@ -75,7 +75,6 @@ Une attention particulière est portée à la reproductibilité,
 - Python
 - pandas, numpy
 - scikit-learn
-- XGBoost
 - SHAP
 - matplotlib / seaborn
 
